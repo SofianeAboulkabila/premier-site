@@ -1,0 +1,294 @@
+@Font-face {
+  font-family: Aboreto-Regular;
+  src: url(./assets/Aboreto-Regular.ttf);
+}
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Aboreto-Regular", Monaco, monospace;
+  letter-spacing: -0.3px;
+  word-spacing: 3.6px;
+  font-weight: 200;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-shadow: 1px 3px 5px #7f7f7f;
+      
+}
+/* NAVBAR + DISPOSITION DES 4 BOUTTONS LA COMPOSANT*/
+.navbar {
+  display: flex;
+justify-content: space-evenly;
+align-items: center;
+align-content: center;
+  background: rgb(81, 81, 81);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  font-size: 1.2rem;
+  z-index: 5;
+}
+ /* LOGO NAVBAR */
+#logo {
+  border-radius: 50%;
+  width: 80px;
+  margin: 10px;
+}
+/* BACKGROUND DE LA PAGE */
+body {
+  background: linear-gradient(to bottom, rgba(171, 158, 158, 0.239), rgba(43, 41, 41, 0.545) 50%, rgba(73, 70, 70, 0.252) 75%, rgba(73, 70, 70, 0.252) 75%) center/cover;
+ 
+}
+/* ENSEMBLE DES LIENS STYLE LI (NAVBAR/FOOTER) */
+a {
+  text-align: center;
+  color: #e3e3e3;
+  font-size: 1.5rem !important;
+}
+/* EFFET HOVER DES LIENS (BOUTTONS DYNAMIQUES NAVBAR/FOOTER) */
+a:hover {
+  background-color: #2a292f;
+  border: 2px solid red;
+  padding: .8rem;
+  transition: 0.10s;
+  color: red;
+}  
+/* PREMIERE PARTIE DE LA PAGE (PHOTO+TEXTE INTRODUCTION) */
+.accueil {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: 100px;
+  height: 720px;
+}
+/* UNIQUEMENT POUR TEXTE INTRODUCTION */
+h1 {
+  color: #000000;
+  font-size: 5rem;
+}
+/* IMAGE POUR INTRODUCTION */
+#img-1 {
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+}
+/* ENSEMBLE DES TITRES: PROJETS/A PROPOS/CONTACT */
+h2 {
+  color: #0c104d;
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  font-style: oblique;
+}
+/* ICI BAS L'ENSEMBLE DES COMPOSANTS VISUELS DU CAROUSEL HORIZONTAL PROJETS */
+
+#css {
+  color: yellow;
+  font-family: 'Odibee Sans', cursive;
+}
+
+.carousel-wrapper {
+  height: 600px;
+  position: relative;
+  width: 800px;
+  display: block;
+  margin: 50px auto ;
+  border: 2px solid black;
+  z-index: auto;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.arrow{
+  border: solid 2px rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+  
+}
+.arrow-prev {
+  left: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+
+}
+.arrow-next {
+  right: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^= "item"] {
+  display: none;
+}
+/* POUR MODIFIER IMAGE CAROUSEL, CHANGER URL VERS UNE AUTRE IMAGE */
+/* VOIR COMMENTAIRE HTML POUR RAJOUTER UNE NOUVELLE IMAGE */
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url('./assets/img/img1.jpeg');
+  background-size: cover;
+}
+.item-2 {
+  background: url('./assets/img/img2.jpeg');
+  background-size: cover;
+}
+.item-3 {
+  background: url('./assets/img/img3.jpeg');
+  background-size: cover;
+}
+
+*:target ~ .item-1{
+  opacity: 0;
+  
+}
+#item-1:target ~ .item-1 {
+  opacity: 1;
+
+}
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
+/* FIN DU CAROUSEL */
+
+/* TEXTE COMPOSANT LE A PROPOS */
+#rep1 {
+  text-transform: uppercase;
+  color: rgb(1, 1, 1);
+  text-align: center;
+  margin-top: 50px;
+  font-size: 3.5rem;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom:  200px;
+}
+
+/* CHAMP DE SAISIE COMPOSANT LE FORMULAIRE CONTACT */
+input{
+  text-align: center;
+  border: 2px solid black;
+  padding: 10px 30px;
+  text-shadow: none;
+  font-size: 30px;
+}
+/* BOUTTON FIN DE FORMULAIRE CONTACT */
+#submit {
+  border-radius: 20px;
+  margin-left: 35%;
+  transform: translateX(50%);
+  transform: translateY(50%);
+}
+/* CLASSE DE L'ENSEMBLE DES INPUTS COMPOSANT LE FORMULAIRE CONTACT ALIAS INPUTS */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  font-size: 350%;
+}
+/* PARENT DE LA CLASSE DES INPUTS CI-DESSUS */
+form {
+  margin-right: auto;
+  margin-left: auto;
+}
+/* LIEN EMBD CARTE GOOGLE */
+iframe {
+  border-radius: 10%;
+  width: 100%;
+}
+/* PARENT 1 DE LA CARTE GOOGLE, .form = PARENT N2 */
+#map {
+  width: auto;
+  height: auto;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 25px;
+}
+/* CLASSE EQUIVALENTE AU .navbar POUR LE FOOTER */
+.footerA {
+  display: flex;
+justify-content: space-evenly;
+align-items: center;
+align-content: center;
+  background: rgb(81, 81, 81);
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+
+/* ENSEMBLE DU RESPONSIVE (ADAPTIBILITE MOBILE) UNIQUEMENT SI ECRAN  MAX 1040px */
+/* VOIR LE index.html OU PLUS HAUT DANS LE CSS POUR COMPRENDRE L'UTILITE DE CHACUN */
+@media screen and (max-width: 1040px ) {
+  .accueil {
+      grid-template-columns: 100%;
+      text-align: center;
+  }
+  .nbt {
+      font-size: 1.1rem !important;
+  }
+  .form {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 100%;
+      margin-top: -100px;
+  }
+  h1 {
+      margin-top: 100px;
+      font-size: 3rem;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+  #projets {
+      grid-template-columns: 1fr 1fr;
+  }
+  h2 {
+      margin-top: 250px;
+  }
+  #l1 {
+    margin-top: 100px;
+    margin-bottom: -200px;
+  }
+  #rep1 {
+    padding-top: 75px;
+  }
+  #img-1 {
+      margin-top: 80px;
+  }
+  #map {
+      margin-bottom: 50px;
+  }
+  #rep1 {
+      margin-top: 250px;
+  }
+  a {
+      font-size: 1.1rem !important;
+  }
+  .pic-ctn {
+    margin-bottom: -150px;
+  }
+  .carousel-wrapper{
+    height: 600px;
+    width: auto;
+}
+@media screen and (max-width: 1040px ) {
+  .carousel-wrapper {
+    height: fit-contet;
+    width: auto;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
