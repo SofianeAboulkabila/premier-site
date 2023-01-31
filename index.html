@@ -1,73 +1,21 @@
-<!-- BIENVENUE DANS MON PROJET TOUT BIEN COMMENTER PSK J'SUIS UN BG -->
-
-
-<!-- CI DESSOUS PARTIE PHP POUR ENVOIE FORMULAIRE VERS MAIL -->
-<!-- A INCORPORER LORS DE RESOLUTION ERROR 405 -->
-
-<!-- VERSION 1 -->
-<!-- PENSER A MODIFIER FROM (LIGNE 14) et REPLY-TO (LIGNE 15) -->
-
-<!-- <?php
-    if (isset($_POST['message'])) {
-        $entete  = 'MIME-Version: 1.0' . "\r\n";
-        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-        $entete .= 'From: webmaster@monsite.fr' . "\r\n";
-        $entete .= 'Reply-to: ' . $_POST['email'];
-
-        $message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
-        <p><b>Email : </b>' . $_POST['email'] . '<br>
-        <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
-
-        $retour = mail('sofiane.aboulkabila@outlook.com', 'Envoi depuis page Contact', $message, $entete);
-        if($retour)
-            echo '<p>Votre message a bien été envoyé.</p>';
-    }
-    ?> -->
-
- <!-- VERSION 2 -->
- <!-- PENSER A MODIFIER DOMAINE(header(LOCATION)) -->
-
-    <!-- <?php
-    extract($_POST);
-
-    $text  = "-------------------------------------------\n";
-    $text .= "Formulaire de contact\n";
-    $text .= "-------------------------------------------\n";
-    $text .= "\n";
-    $text .= "Nom        : $nom\n";
-    $text .= "Prénom     : $prenom\n";
-    $text .= "Adresse    : $adresse\n";
-    $text .= "NPA Ville  : $npa $ville\n";
-    $text .= "Téléphone  : $tel\n";
-    $text .= "Email      : mailto:$email\n";
-    $text .= "\n";
-    $text .= "Remarque\n";
-    $text .= "--------\n";
-    $text .= "\n";
-    $text .= "$remarque\n";
-    $text .= "\n";
-    $text .= "-------------------------------------------\n";
-
-    mail("sofiane.aboulkabila@outlook.com", "Contact du site", $text);
-
-    header('Location: http://www.domain.ch/merci.html');
-?> -->
-    
 <!DOCTYPE html>
-<!-- MISE EN PAGE BASIQUE POUR HTML -->
 <html lang="en">
+
+<!-- MISE EN PAGE BASIQUE POUR HTML -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TITRE DU DOCUMENT SUR ONGLET INTERNET -->
-    <title>PORTFOLIO DE SOFIANE ABOULKABILA</title> -->
     <!-- LIEN VERS LE CSS, AJOUTER AUTRE LIEN SI BESOIN CUSTOMISER LOGO DE L'ONGLET -->
     <link rel="stylesheet" href="style.css">
+    <!-- TITRE DU DOCUMENT SUR ONGLET INTERNET --> 
+    <title>PORTFOLIO DE SOFIANE ABOULKABILA</title> 
 </head>
 
 <body>
     <!-- CI-DESSOUS ELEMENTS COMPOSANT LA NAVBAR LOGO+4 BOUTTONS -->
+
     <header>
             <ul  class="navbar">
                 <img id="logo" src="./assets/img/Rival_Hacker.webp" alt="logo">
@@ -85,14 +33,20 @@
                 </li>
             </ul>
     </header>
+
     <!-- COMPOSANT IMG+TEXTE DE L'ACCUEIL DE LA PAGE -->
+
     <span class="accueil">
         <img src="./assets/img/240895587_3005109876396417_6516725595463982434_n.jpg" alt="photo profil" id="img-1">
         <h1>PORTFOLIO DE SOFIANE ABOULKABILA</h1>
     </span>
+
     <!-- TITRE/PARTIE PROJET  -->
+    
     <h2 id="ecart">PROJETS:</h2>
+
     <!-- ENSEMBLE DES ELEMENTS COMPOSANT LE CARROUSSEL -->
+
     <div class="carousel-wrapper">
         <span id="item-1"></span>
         <span id="item-2"></span>
@@ -109,30 +63,41 @@
           <a href="#item-2" class="arrow-prev arrow"></a>
           <a href="#item-1" class="arrow-next arrow"></a>
         </div>
+
         <!-- RAJOUTER UNE DIV CAROUSEL ITEM 4 (OU +) DE LA MEME MANIERE QUE CI-DESSUS -->
         <!-- VOIR LA PARTIE CAROUSEL DANS LE CSS POUR LA SUITE -->
     
       </div>
+
     <!-- TITRE/PARTIE A PROPOS CONTENANT LE TITRE PUIS LE TEXTE SOUS CE DERNIER  -->
     <div class="propos">
         <h2 id="l1">A PROPOS:</h2>
         <p id="rep1">JE m’appelle Sofiane aboulkabila et voici mon premier projet de portfolio 01/2023</p>
     </div>
+
     <!-- TITRE/PARTIE CONTACT -->
+
    <div class="contact">
     <h2 id="vers-bas">CONTACT:</h2>
+
     <!-- ELEMENTS COMPOSANTS LE FORMULAIRE  -->
     <!-- DANS L'ORDRE: PRENOM/NOM/NUM DE TEL/MAIL/BOUTTON ENVOIE FORMULAIRE -->
+    <!-- CONTIENT AUSSI LES TEXTE INDICATIFS SUR SAISIE INPUT <p> -->
+
     <div class="form">
         <form method="post" action="mail.php">
-            <input type="text" id="name1" placeholder="PRENOM" name="name1">
-        </br>
-            <input type="text" id="name2" placeholder="NOM" name="name2">
-        </br>
-            <input type="number" id="phone" placeholder="NUM. DE TEL" name="phone">
-        </br>
-            <input type="email" id="email" placeholder="ADRESSE MAIL" name="email">
-        </br>
+            <input type="text" id="name1" placeholder="PRENOM" name="name1" maxlength="12" minlength="4" required>
+        <p>Caractère minimum:<i class="green">4</i></p>
+        <p>Caractère maximum:<i class="red">12</i></p>
+            <input type="text" id="name2" placeholder="NOM" name="name2" maxlength="12" minlength="4" required>
+        <p>Caractère minimum:<i class="green">4</i></p>
+        <p>Caractère maximum:<i class="red">12</i></p>
+            <input type="number" id="phone" placeholder="NUM. DE TEL" name="phone" maxlength="10" minlength="10" required>
+        <p>Caractère minimum:<i class="green">10</i></p>
+        <p>Caractère maximum:<i class="red">10</i></p>
+            <input type="email" id="email" placeholder="ADRESSE MAIL" name="email" maxlength="30" minlength="10" required>
+        <p>Caractère minimum:<i class="green">10</i></p>
+        <p>Caractère maximum:<i class="red">10</i></p>
             <input type="submit" id="submit" name="submit">
         </form>
         <!-- PARTIE MAP GOOGLE, PENSER A TELECHARGER ET VENIR PLACER DANS ASSETS -->
@@ -142,6 +107,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.3183688649424!2d5.414236!3d43.328526600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x26144d7cd0241160!2sAFPA!5e0!3m2!1sfr!2sfr!4v1674739482549!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+
     </div>
         <!-- ELEMENTS COMPOSANT LE FOOTER DE LA PAGE -->
         <!-- COMPRENANT 4 BOUTTONS VERS LIENS DE PAGES RESEAUX SOCIAUX -->

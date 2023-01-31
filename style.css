@@ -1,9 +1,12 @@
 /* INCORPORATION POLICE ECRITURE */
+
 @Font-face {
   font-family: Aboreto-Regular;
   src: url(./assets/Aboreto-Regular.ttf);
 }
+
 /* ELEMENTS GENERAUX DE LA PAGE */
+
 * {
   list-style: none;
   padding: 0;
@@ -13,57 +16,72 @@
   font-family: "Aboreto-Regular", Monaco, monospace;
   letter-spacing: -0.3px;
   word-spacing: 3.6px;
-  font-weight: 200;
   text-decoration: none;
   font-style: normal;
   font-variant: small-caps;
-  text-shadow: 7px 1px 6px #7f7f7f;
-      
+  text-shadow: 1px 0px 13px #606060;
 }
+
 /* NAVBAR + DISPOSITION DES 4 BOUTTONS LA COMPOSANT*/
+
 .navbar {
   display: flex;
-justify-content: space-evenly;
-align-items: center;
-align-content: center;
-  background: rgb(81, 81, 81);
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  background-color: #343232;
   width: 100%;
   position: fixed;
   top: 0;
   font-size: 1.2rem;
   z-index: 5;
 }
+
  /* LOGO NAVBAR */
+
 #logo {
   border-radius: 50%;
   width: 90px;
   margin: 10px;
   filter: brightness(100%);
 }
+
 /* EFFET HOVER LOGO NAVBAR*/
+
 #logo:hover {
   filter: brightness(15%);
 }
+
 /* BACKGROUND DE LA PAGE */
+
 body {
-  background: linear-gradient(to bottom, rgba(171, 158, 158, 0.239), rgba(43, 41, 41, 0.545) 50%, rgba(73, 70, 70, 0.252) 75%, rgba(73, 70, 70, 0.252) 75%) center/cover;
- 
+  background: rgb(51,51,51);
+  background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(89,89,89,1) 20%, rgba(134,134,132,1) 40%, rgba(156,156,156,1) 60%, rgba(180,180,180,1) 80%, rgba(231,231,231,1) 100%);
 }
+
 /* ENSEMBLE DES LIENS STYLE TEXTE LI (NAVBAR/FOOTER) */
+
 a {
   text-align: center;
-  color: #d5d5d5;
-  font-size: 1.5rem !important;
+  color: #000000;
+  font-size:  1.8rem !important;
+  font-weight: bold;
+font-family: Poppins, Monaco, sans-serif;
 }
+
 /* EFFET HOVER DES LIENS (BOUTTONS DYNAMIQUES NAVBAR/FOOTER) */
+
 a:hover {
   background-color: #2a292f;
-  border: 2px solid red;
+  border: 2px solid rgb(32, 32, 32);
   padding: .8rem;
   transition: 0.10s;
-  color: red;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px -1px 20px #7f7f7f;
 }  
+
 /* PREMIERE PARTIE DE LA PAGE (PHOTO+TEXTE INTRODUCTION) */
+
 .accueil {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -71,12 +89,17 @@ a:hover {
   margin-top: 100px;
   height: 720px;
 }
+
 /* UNIQUEMENT POUR TEXTE INTRODUCTION */
+
 h1 {
   color: #000000;
   font-size: 5rem;
+  margin: 50px;
 }
+
 /* IMAGE POUR INTRODUCTION */
+
 #img-1 {
   margin: auto;
   height: 500px;
@@ -85,22 +108,27 @@ h1 {
   box-shadow: 14px -9px 6px 6px rgb(57 57 57), 1em 0 0.2rem rgb(123 122 122);
   filter: brightness(70%);
 }
+
 /* EFFET HOVER IMAGE PRINCIPALE INTRODUCTION/ACCUEIL */
+
 #img-1:hover {
     filter: brightness(100%);
     box-shadow: -14px -9px 6px 6px rgb(57 57 57);
 }
+
 /* ENSEMBLE DES TITRES: PROJETS/A PROPOS/CONTACT */
+
 h2 {
   color: bold #404040;
   text-align: center;
-  font-size: 5.5rem;
+  font-size: 6.25rem;
+  padding: 3px;
   margin-top: 80px;
   margin-bottom: 80px;
-  font-style: oblique;
-  text-shadow: 3px 6px 3px #676666;
-  text-decoration: underline rgba(183, 183, 183, 0.178);
+  box-shadow: inset 0px 0px 17px 9px rgb(0 0 0);
+  background: rgb(87 86 86);
 }
+
 /* ENSEMBLE DES COMPOSANTS VISUELS DU CAROUSEL HORIZONTAL PROJETS */
 
 #css {
@@ -108,6 +136,7 @@ h2 {
   font-family: 'Odibee Sans', cursive;
 }
 /* ZONE WRAPPANT L'ENSEMBLE, MODIFIER ICI POUR STYLISER LA BOX */
+
 .carousel-wrapper {
   height: 600px;
   position: relative;
@@ -118,7 +147,9 @@ h2 {
   z-index: auto;
   box-shadow: 11px -2px 2px 4px rgb(57 57 57), 0.8em 0 0 rgb(123 122 122);
 }
+
 /* EFFET HOVER BOX CAROUSEL */
+
 .carousel-wrapper:hover {
   scale: 1.07;
 }
@@ -158,6 +189,7 @@ h2 {
 }
 /* POUR MODIFIER IMAGE CAROUSEL, CHANGER URL VERS UNE AUTRE IMAGE */
 /* VOIR COMMENTAIRE HTML POUR RAJOUTER UNE NOUVELLE IMAGE */
+
 .item-1 {
   z-index: 2;
   opacity: 1;
@@ -185,21 +217,21 @@ h2 {
   z-index: 3;
   opacity: 1;
 }
+
 /* FIN DU CAROUSEL */
 
 /* TEXTE COMPOSANT LE A PROPOS */
+
 #rep1 {
   text-transform: uppercase;
   color: rgb(1, 1, 1);
   text-align: center;
-  margin-top: 50px;
   font-size: 3.5rem;
-  margin-right: 50px;
-  margin-left: 50px;
-  margin-bottom:  200px;
+  margin: 100px;
 }
 
 /* CHAMP DE SAISIE COMPOSANT LE FORMULAIRE CONTACT */
+
 input{
   text-align: center;
   border: 2px solid black;
@@ -207,40 +239,87 @@ input{
   text-shadow: none;
   font-size: 30px;
   box-shadow: 3px 5px 7px #000000;
+  background: gray;
+  margin-top: 10px;
 }
+
+/* CHANGER STYLE TEXTE PLACEHOLDER */
+
+input::placeholder {
+  color: black;
+  font-size: 30px;
+}
+
+/* STYLE CONDTIONS SOUS INPUT FORMULAIRE */
+
+.form p {
+  margin-top: 20px;
+  color: bold black;
+  font-size: 1.1rem;
+  text-align: center;
+  display: block-inline;
+  text-decoration: underline;
+  font-family: 'Courier New', Courier, monospace;
+}
+.form .green, .form .red {
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Courier New', Courier, monospace;
+}
+.green {
+  color: #00ff00ba;
+}
+.red {
+  color: #ff3939;
+}
+
 /* BOUTTON FIN DE FORMULAIRE CONTACT */
+
 #submit {
   border-radius: 20px;
-  margin-left: 35%;
+  margin-left: 33%;
   transform: translateX(50%);
   transform: translateY(50%);
   box-shadow: 3px 5px 7px #000000;
+  margin-bottom: 50px;
 }
+
 /* HOVER DU BOUTTON ENVOYER */
+
 #submit:hover {
   background: rgb(26, 25, 25);
   color:  white;
   border: 3px solid #ce7113;
   text-shadow: 5px 5px 7px #b86f26;
 }
+
 /* CLASSE DE L'ENSEMBLE DES INPUTS COMPOSANT LE FORMULAIRE CONTACT ALIAS INPUTS */
+
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
+
 /* PARENT DE LA CLASSE DES INPUTS CI-DESSUS */
+
 form {
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 55px;
 }
+
 /* BOX CARTE GOOGLE/ */
+
 iframe {
   width: 100%;
   border-radius: 20%;
 }
+
 /* PARENT 1 DE LA CARTE GOOGLE, .form = PARENT N2 */
 /* STYLISER BORDURE CARTE ICI */
+
 #map {
   width: auto;
   height: auto;
@@ -251,21 +330,24 @@ iframe {
   border-radius: 20%;
   box-shadow: 14px -1px 9px 6px rgb(57 57 57), 0.8em 0 0 rgb(123 122 122);
 }
+
 /* CLASSE EQUIVALENTE AU .navbar POUR LE FOOTER */
+
 .footerA {
   display: flex;
-justify-content: space-evenly;
-align-items: center;
-align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
   background: rgb(81, 81, 81);
   width: 100%;
   font-size: 1.2rem;
 }
 
 
-/* ENSEMBLE DU RESPONSIVE (ADAPTIBILITE MOBILE) UNIQUEMENT SI ECRAN  MAX 1040px */
+/* ENSEMBLE DU RESPONSIVE (ADAPTIBILITE MOBILE) UNIQUEMENT SI ECRAN  MAX 1090px */
 /* VOIR LE index.html OU PLUS HAUT DANS LE CSS POUR COMPRENDRE L'UTILITE DE CHACUN */
-@media screen and (max-width: 1040px ) {
+
+@media screen and (max-width: 1090px ) {
   .accueil {
       grid-template-columns: 100%;
       text-align: center;
@@ -288,11 +370,13 @@ align-content: center;
       grid-template-columns: 1fr 1fr;
   }
   h2 {
-      margin-top: 250px;
+      margin-top: 175px;
+      margin-bottom: 100px;
+      padding: 10px;
   }
   #l1 {
     margin-top: 100px;
-    margin-bottom: -200px;
+    margin-bottom: -225px;
   }
   #rep1 {
     padding-top: 75px;
@@ -307,7 +391,7 @@ align-content: center;
       margin-top: 250px;
   }
   a {
-      font-size: 1.1rem !important;
+      font-size: 1.5rem !important;
   }
   .pic-ctn {
     margin-bottom: -150px;
