@@ -90,12 +90,13 @@ font-family: Poppins, Monaco, sans-serif;
 /* EFFET HOVER DES LIENS (BOUTTONS DYNAMIQUES NAVBAR/FOOTER) */
 
 a:hover {
-  background-color: #2a292f;
-  border: 2px solid rgb(32, 32, 32);
+  border-radius: 25%;
   padding: .8rem;
-  transition: 0.10s;
-  color: rgb(255, 255, 255);
-  text-shadow: 2px -1px 20px #7f7f7f;
+  transition: 0.2s;
+  background: rgb(26, 25, 25);
+  color:  white;
+  border: 3px solid #ce7113;
+  text-shadow: 5px 5px 7px #b86f26;
 }  
 
 /* PREMIERE PARTIE DE LA PAGE (PHOTO+TEXTE INTRODUCTION) */
