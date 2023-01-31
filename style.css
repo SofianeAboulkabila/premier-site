@@ -2,7 +2,7 @@
 
 @Font-face {
   font-family: Aboreto-Regular;
-  src: url(./assets/Aboreto-Regular.ttf);
+  src: url(./assets/font/Aboreto-Regular.ttf);
 }
 
 /* ELEMENTS GENERAUX DE LA PAGE */
@@ -51,12 +51,30 @@
 #logo:hover {
   filter: brightness(15%);
 }
+#meme {
+  display: none;
+}
+
+ /* --------------------------------------------------------------------------------
+                          EFFET HOVER LOGO APPARITION MEME LOGO - SUPRIMER POUR VOIR
+ -----------------------------------------------------------------------------------
+
+#logo:hover + img { 
+  display: block;
+  width: 100vh;
+  height: 100vh;
+} 
+------------------------------------------------------------------------------------
+                          EFFET HOVER LOGO APPARITION MEME LOGO - SUPRIMER POUR VOIR
+ -----------------------------------------------------------------------------------
+ */ 
 
 /* BACKGROUND DE LA PAGE */
 
 body {
   background: rgb(51,51,51);
   background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(89,89,89,1) 20%, rgba(134,134,132,1) 40%, rgba(156,156,156,1) 60%, rgba(180,180,180,1) 80%, rgba(231,231,231,1) 100%);
+  z-index: 4;
 }
 
 /* ENSEMBLE DES LIENS STYLE TEXTE LI (NAVBAR/FOOTER) */
@@ -121,12 +139,14 @@ h1 {
 h2 {
   color: bold #404040;
   text-align: center;
-  font-size: 6.25rem;
+  font-size: 5.7rem;
   padding: 3px;
   margin-top: 80px;
   margin-bottom: 80px;
   box-shadow: inset 0px 0px 17px 9px rgb(0 0 0);
   background: rgb(87 86 86);
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 /* ENSEMBLE DES COMPOSANTS VISUELS DU CAROUSEL HORIZONTAL PROJETS */
