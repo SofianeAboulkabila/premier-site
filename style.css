@@ -35,6 +35,8 @@
   top: 0;
   font-size: 1.2rem;
   z-index: 5;
+  border-bottom: 3px solid #b86f26;
+  border-top: 3px solid #b86f26;
 }
 
  /* LOGO NAVBAR */
@@ -50,6 +52,7 @@
 
 #logo:hover {
   filter: brightness(15%);
+  transition: 0.4s;
 }
 #meme {
   display: none;
@@ -92,7 +95,8 @@ font-family: Poppins, Monaco, sans-serif;
 a:hover {
   border-radius: 25%;
   padding: .8rem;
-  transition: 0.2s;
+  transition: 0.1s;
+  animation-timing-function: linear;
   background: rgb(26, 25, 25);
   color:  white;
   border: 3px solid #ce7113;
@@ -133,6 +137,7 @@ h1 {
 #img-1:hover {
     filter: brightness(100%);
     box-shadow: -14px -9px 6px 6px rgb(57 57 57);
+    transition: 0.5s;
 }
 
 /* ENSEMBLE DES TITRES: PROJETS/A PROPOS/CONTACT */
@@ -145,7 +150,7 @@ h2 {
   margin-top: 80px;
   margin-bottom: 80px;
   box-shadow: inset 0px 0px 17px 9px rgb(0 0 0);
-  background: rgb(87 86 86);
+  background: #ff7f0042;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -173,6 +178,7 @@ h2 {
 
 .carousel-wrapper:hover {
   scale: 1.07;
+  transition: 0.5s;
 }
 .carousel-item {
   position: absolute;
@@ -255,7 +261,7 @@ h2 {
 
 input{
   text-align: center;
-  border: 2px solid black;
+  border: 1px solid #b86f26;
   padding: 10px 30px;
   text-shadow: none;
   font-size: 30px;
@@ -304,6 +310,7 @@ input::placeholder {
   transform: translateY(50%);
   box-shadow: 3px 5px 7px #000000;
   margin-bottom: 50px;
+  border: 2px solid black;
 }
 
 /* HOVER DU BOUTTON ENVOYER */
@@ -313,6 +320,7 @@ input::placeholder {
   color:  white;
   border: 3px solid #ce7113;
   text-shadow: 5px 5px 7px #b86f26;
+  transition: 0.2s;
 }
 
 /* CLASSE DE L'ENSEMBLE DES INPUTS COMPOSANT LE FORMULAIRE CONTACT ALIAS INPUTS */
@@ -347,7 +355,7 @@ iframe {
   margin-right: 50px;
   margin-left: 50px;
   margin-bottom: 25px;
-  border: 3px solid black;
+  border: 2px solid #b86f26;
   border-radius: 20%;
   box-shadow: 14px -1px 9px 6px rgb(57 57 57), 0.8em 0 0 rgb(123 122 122);
 }
@@ -362,6 +370,8 @@ iframe {
   background: rgb(81, 81, 81);
   width: 100%;
   font-size: 1.2rem;
+  border-top: 3px solid #b86f26;
+  border-bottom: 3px solid #b86f26;
 }
 
 
@@ -405,9 +415,6 @@ iframe {
   #img-1 {
       margin-top: 80px;
   }
-  #map {
-      margin-bottom: 50px;
-  }
   #rep1 {
       margin-top: 250px;
   }
@@ -420,7 +427,12 @@ iframe {
   .carousel-wrapper{
     height: 600px;
     width: auto;
+  }
+  input {
+    margin-top: 100px;
+  }
 }
+
 @media screen and (max-width: 1040px ) {
   .carousel-wrapper {
     height: fit-contet;
