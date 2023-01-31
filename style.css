@@ -82,12 +82,13 @@ h1 {
   height: 500px;
   width: 500px;
   border-radius: 50%;
-  box-shadow: 1px 3px rgb(57, 57, 57), 1em 0 0.2rem rgb(123, 122, 122);
+  box-shadow: 14px -9px 6px 6px rgb(57 57 57), 1em 0 0.2rem rgb(123 122 122);
   filter: brightness(70%);
 }
 /* EFFET HOVER IMAGE PRINCIPALE INTRODUCTION/ACCUEIL */
 #img-1:hover {
     filter: brightness(100%);
+    box-shadow: -14px -9px 6px 6px rgb(57 57 57), 1em 0 0.2rem rgb(123 122 122);
 }
 /* ENSEMBLE DES TITRES: PROJETS/A PROPOS/CONTACT */
 h2 {
@@ -115,7 +116,7 @@ h2 {
   margin: 50px auto ;
   border: 2px solid black;
   z-index: auto;
-  box-shadow: 1px 0px 2px 2px rgb(57, 57, 57), 0.8em 0 0  rgb(123, 122, 122);
+  box-shadow: 11px -2px 2px 4px rgb(57 57 57), 0.8em 0 0 rgb(123 122 122);
 }
 /* EFFET HOVER BOX CAROUSEL */
 .carousel-wrapper:hover {
@@ -160,7 +161,7 @@ h2 {
 .item-1 {
   z-index: 2;
   opacity: 1;
-  background: url('./assets/img/img1.jpeg') center/cover;
+  background: url('./assets/img/img3.jpeg') center/cover;
   
 }
 .item-2 {
@@ -168,7 +169,7 @@ h2 {
   
 }
 .item-3 {
-  background: url('./assets/img/img3.jpeg') center/cover;
+  background: url('./assets/img/img1.jpeg') center/cover;
   
 }
 
@@ -227,27 +228,28 @@ input{
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  font-size: 350%;
 }
 /* PARENT DE LA CLASSE DES INPUTS CI-DESSUS */
 form {
   margin-right: auto;
   margin-left: auto;
 }
-/* LIEN EMBD CARTE GOOGLE */
+/* BOX CARTE GOOGLE/ */
 iframe {
-  border-radius: 10%;
   width: 100%;
+  border-radius: 20%;
 }
 /* PARENT 1 DE LA CARTE GOOGLE, .form = PARENT N2 */
+/* STYLISER BORDURE CARTE ICI */
 #map {
   width: auto;
   height: auto;
   margin-right: 50px;
   margin-left: 50px;
   margin-bottom: 25px;
-  
-  ;
+  border: 3px solid black;
+  border-radius: 20%;
+  box-shadow: 14px -1px 9px 6px rgb(57 57 57), 0.8em 0 0 rgb(123 122 122);
 }
 /* CLASSE EQUIVALENTE AU .navbar POUR LE FOOTER */
 .footerA {
