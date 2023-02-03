@@ -95,8 +95,6 @@ font-family: Poppins, Monaco, sans-serif;
 a:hover {
   border-radius: 25%;
   padding: .8rem;
-  transition: 0.1s;
-  animation-timing-function: linear;
   background: rgb(26, 25, 25);
   color:  white;
   border: 3px solid #ce7113;
