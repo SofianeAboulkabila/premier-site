@@ -45,15 +45,18 @@
   border-radius: 50%;
   width: 90px;
   margin: 10px;
-  filter: brightness(100%);
+  filter: brightness(30%);
+  transition: 0.5s;
 }
 
 /* EFFET HOVER LOGO NAVBAR*/
 
 #logo:hover {
-  filter: brightness(15%);
-  transition: 0.4s;
+  filter: brightness(100%);
+  transition: 0.5s;
+  box-shadow: inset 1px 0px 18px 15px rgb(255 117 0), 0em 1px 3rem 14px rgb(255, 255, 255);
 }
+
 #meme {
   display: none;
 }
@@ -98,7 +101,7 @@ a:hover {
   background: rgb(26, 25, 25);
   color:  white;
   border: 3px solid #ce7113;
-  text-shadow: 5px 5px 7px #b86f26;
+  text-shadow: 3px 3px 7px #b86f26;
 }  
 
 /* PREMIERE PARTIE DE LA PAGE (PHOTO+TEXTE INTRODUCTION) */
@@ -127,13 +130,14 @@ h1 {
   width: 500px;
   border-radius: 50%;
   box-shadow: 14px -9px 6px 6px rgb(57 57 57), 1em 0 0.2rem rgb(123 122 122);
-  filter: brightness(50%);
+  filter: brightness(100%);
+  transition: 0.5s;
 }
 
 /* EFFET HOVER IMAGE PRINCIPALE INTRODUCTION/ACCUEIL */
 
 #img-1:hover {
-    filter: brightness(100%);
+    filter: brightness(50%);
     box-shadow: -14px -9px 6px 6px rgb(57 57 57);
     transition: 0.5s;
 }
